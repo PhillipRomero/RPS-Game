@@ -30,7 +30,7 @@ function getComputerChoice() {
 }
 
 // Get game winner
-function getWinner(p, c) {
+ function getWinner(p, c) {
   if (p === c) {
     return 'draw';
   } else if (p === 'rock') {
@@ -54,6 +54,7 @@ function getWinner(p, c) {
   }
 }
 
+
 function showWinner(winner, computerChoice) {
   if (winner === 'player') {
     // Inc player score
@@ -75,8 +76,7 @@ function showWinner(winner, computerChoice) {
     `;
   } else {
     result.innerHTML = `
-      <h1>It's A Draw</h1>
-      <i class="fas fa-hand-${computerChoice} fa-10x"></i>
+      <h1 class= "text-draw">It's A Draw</h1>
       <p>Computer Chose <strong>${computerChoice.charAt(0).toUpperCase() +
         computerChoice.slice(1)}</strong></p>
     `;
