@@ -87,7 +87,8 @@ body {
 }
 
 .choice:hover {
-  color: var(--primary-color);
+  background: var(--dark-color);
+  color: var(--light-color);
 }
 
 .text-win {

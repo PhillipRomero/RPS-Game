@@ -64,6 +64,7 @@ function showWinner(winner, computerChoice) {
       <h1 class="text-win">You Win</h1>
       <p>Computer Chose <strong>${computerChoice.charAt(0).toUpperCase() +
         computerChoice.slice(1)}</strong></p>
+      <p>${randPlayer(playerWin)}</p>  
     `;
   } else if (winner === 'computer') {
     // Inc computer score
@@ -73,12 +74,16 @@ function showWinner(winner, computerChoice) {
       <h1 class="text-lose">You Lose</h1>
       <p>Computer Chose <strong>${computerChoice.charAt(0).toUpperCase() +
         computerChoice.slice(1)}</strong></p>
+        <p>${randCom(ComWin)}</p>  
+    
     `;
   } else {
     result.innerHTML = `
       <h1 class= "text-draw">It's A Draw</h1>
       <p>Computer Chose <strong>${computerChoice.charAt(0).toUpperCase() +
         computerChoice.slice(1)}</strong></p>
+        <p>${randDraw(DrawGame)}</p>  
+
     `;
   }
   // Show score
@@ -106,6 +111,22 @@ function clearModal(e) {
     modal.style.display = 'none';
   }
 }
+
+//Random win quote
+function randPlayer(playerWin) {
+  return playerWin[Math.floor(Math.random() * playerWin.length)];
+}
+const playerWin = ['My algorithms were\'t working','Lag player...','I just wasn\'t playing to my level','You try hard :/','Using Rock isn\'t a strategy','I let you win'];
+
+function randCom(ComWin) {
+  return ComWin[Math.floor(Math.random() * ComWin.length)];
+}
+const ComWin = ['Git Gud','Learn the match up :)','I am the noobslayer!','A win is a win ¯\\_(ツ)_/¯','000110001 00110011 00110011 00110111'];
+
+function randDraw(DrawGame) {
+  return DrawGame[Math.floor(Math.random() * DrawGame.length)];
+}
+const DrawGame = ['Not like you would be able to win anyways','Are you trying to get 100 draw games of something?','Run the set again!'];
 
 // Event listeners
 choices.forEach(choice => choice.addEventListener('click', play));
