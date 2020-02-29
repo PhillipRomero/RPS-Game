@@ -1,2 +1,5 @@
 # RPS-Game
-Rock Paper Scissors Game using Vanilla JavaScript
+Rock Paper Scissors application using Vanilla JavaScript
+
+# Project link
+https://rps-app.netlify.com/
