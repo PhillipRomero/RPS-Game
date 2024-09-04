@@ -2,4 +2,4 @@
 Rock Paper Scissors application using Vanilla JavaScript
 
 # Project link
-https://rps-app.netlify.com/
+https://rps-chllngr.netlify.app/
