@@ -112,6 +112,10 @@ function clearModal(e) {
   }
 }
 
+modal.onclick = function() {
+  modal.style.display = "none";
+}
+
 //Random win quote
 function randPlayer(playerWin) {
   return playerWin[Math.floor(Math.random() * playerWin.length)];
